@@ -21,6 +21,8 @@ class Block{
             this.nonce++;
             this.hash = this.calculateHash();
         }
+
+        console.log("Block Mined:" + '' + this.hash);
     }
 
 
@@ -74,4 +76,6 @@ let phemCoin = new BlockChain();
 phemCoin.addBlock(new Block(1, "01/08/1995", {amount : 4}));
 phemCoin.addBlock(new Block(2, "08/08/1995", {amount : 7}));
 
+console.log('Mining Block.......');
 console.log(phemCoin);
+console.log('Is Blockchain valid:' +'  ' + phemCoin.isChainValid());
